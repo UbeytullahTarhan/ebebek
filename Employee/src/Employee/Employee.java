@@ -31,10 +31,10 @@ public class Employee {
 
 	}
 	private double bonus() {
-		double bonusHours=workHours/(30/7);//bir ay içerisindeki hafta hesaplaması
+		
 		double bonus=0;
-		if(bonusHours>40) {
-			bonus=(bonusHours-40)*30;
+		if(workHours>40) {
+			bonus=(workHours-40)*30;
 			
 			
 		}
@@ -44,9 +44,9 @@ public class Employee {
 	private void raiseSalary() {
 		double tax=tax();
 		double bonus=bonus();
-		double totalSalary=this.salary+bonus;
+		double totalSalary;
 		double salaryWithTaxAndBonus=this.salary-tax+bonus;
-		this.salary=salaryWithTaxAndBonus;
+		//this.salary=salaryWithTaxAndBonus;
 		int year=2021-hireYear;
 		double raiseSalary;
 		if(year<10) {
@@ -61,6 +61,7 @@ public class Employee {
 			raiseSalary=salary*0.15;
 		}
 		salary+=raiseSalary;
+		totalSalary=salary;
 		employeeInfo+="\nRaise Salary: "+raiseSalary + "\nSalary With Tax And Bonus: "+salaryWithTaxAndBonus
 				+"\nTotal Salary: "+totalSalary;
 		
