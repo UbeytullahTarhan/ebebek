@@ -60,8 +60,8 @@ public class Employee {
 		else {
 			raiseSalary=salary*0.15;
 		}
-		salary+=raiseSalary;
-		totalSalary=salary;
+		
+		totalSalary=salaryWithTaxAndBonus+raiseSalary;
 		employeeInfo+="\nRaise Salary: "+raiseSalary + "\nSalary With Tax And Bonus: "+salaryWithTaxAndBonus
 				+"\nTotal Salary: "+totalSalary;
 		
